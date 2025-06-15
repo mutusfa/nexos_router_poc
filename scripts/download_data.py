@@ -1,4 +1,6 @@
 # You'll need to login using huggingface-cli login
+# You'll also need gcloud command line tool installed and configured
+import subprocess
 
 import pandas as pd
 
@@ -36,6 +38,13 @@ def main():
         )
         ppe_mmlu_pro_best_of_k.to_parquet(ppe_mmlu_pro_best_of_k_path)
         del ppe_mmlu_pro_best_of_k
+
+    crfm_helm_mmlu_path = DATA_DIR / "raw" / "crfm-helm-public/mmlu/benchmark_output/runs"
+    print(f"Downloading {crfm_helm_mmlu_path.name}")
+    subprocess.run(
+        ["gcloud", "storage", "rsync", "-r", "gs://crfm-helm-public/mmlu/benchmark_output/runs/", crfm_helm_mmlu_path]
+    )
+
 
 
 if __name__ == "__main__":

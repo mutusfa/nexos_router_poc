@@ -8,6 +8,8 @@ Proof of concept for router that chooses the best model to answer a particular p
 - Hugging Face CLI (for data download)
 - Google Cloud CLI (for data download)
 - CUDA-compatible GPU with CUDA toolkit installed (required for Jina embeddings model)
+- keys for cloud providers as env vars - checkout .env.template (required if you want to test router on your own data)
+
 
 ### Setup
 1. Clone the repository
