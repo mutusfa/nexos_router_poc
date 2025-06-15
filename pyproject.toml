@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.10,<3.12"
 dependencies = [
     "black>=25.1.0",
-    "chromadb>=1.0.12",
     "datasets>=3.6.0",
     "dspy>=2.6.27",
     "huggingface>=0.0.1",
@@ -14,9 +13,7 @@ dependencies = [
     "ipykernel>=6.29.5",
     "ipython>=8.37.0",
     "litellm[proxy]>=1.72.4",
-    "ollama>=0.5.1",
     "pytest>=8.4.0",
-    "requests>=2.32.4",
     "scikit-learn>=1.7.0",
     "seaborn>=0.13.2",
     "sglang[all]>=0.4.7",
